@@ -158,6 +158,11 @@ h2 {
   transition: transform 0.3s ease-in-out;
   perspective: 1000px;
   overflow: hidden;
+  animation: pulseGlow 3s infinite;
+}
+
+.zoomed-card.enlarged {
+  transform: scale(1.2);
 }
 
 .zoomed-card .card-inner {
@@ -177,6 +182,18 @@ h2 {
 .zoomed-card.flipped .card-back {
   visibility: visible;
   z-index: 1;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px rgba(255, 255, 255, 1);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
+  }
 }
 
 /* OVERLAY */
@@ -201,7 +218,7 @@ h2 {
 footer {
   background: black;
   color: white;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
   padding: 5px 10px;
