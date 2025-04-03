@@ -16,8 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("click", () => {
       const category = card.getAttribute("data-category");
 
-      console.log("Category clicked:", category);
-
       if (category && sounds[category]) {
         if (currentSound) {
           currentSound.pause();

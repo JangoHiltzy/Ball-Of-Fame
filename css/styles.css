@@ -75,7 +75,7 @@ h2 {
 
 /* CATEGORY TITLES */
 h2 {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 15px;
@@ -140,6 +140,109 @@ h2 {
   background-color: #696969;
   z-index: 0;
   visibility: hidden;
+}
+
+/* CARDS GLOW EFFECT BY CATEGORY */
+@keyframes pulseGlowBombers {
+  0% {
+    box-shadow: 0 0 100px rgba(1, 107, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px rgb(0, 85, 255);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(0, 110, 255, 0.3);
+  }
+}
+
+@keyframes pulseGlowThieves {
+  0% {
+    box-shadow: 0 0 100px rgba(255, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px rgba(255, 0, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+  }
+}
+
+@keyframes pulseGlowCornerstones {
+  0% {
+    box-shadow: 0 0 100px rgba(255, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px rgba(255, 255, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(255, 255, 0, 0.3);
+  }
+}
+
+@keyframes pulseGlowRangers {
+  0% {
+    box-shadow: 0 0 100px rgba(0, 255, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px rgba(0, 255, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(0, 255, 0, 0.3);
+  }
+}
+
+@keyframes pulseGlowFlamethrowers {
+  0% {
+    box-shadow: 0 0 100px rgba(255, 165, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px rgba(255, 165, 0, 1);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(255, 165, 0, 0.3);
+  }
+}
+
+@keyframes pulseGlowBackstops {
+  0% {
+    box-shadow: 0 0 100px rgba(138, 43, 226, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 80px rgba(138, 43, 226, 1);
+  }
+  100% {
+    box-shadow: 0 0 50px rgba(138, 43, 226, 0.3);
+  }
+}
+
+.card {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  animation: pulseGlow 2s infinite;
+}
+
+.card[data-category="bombers"] {
+  animation: pulseGlowBombers 2s infinite;
+}
+
+.card[data-category="thieves"] {
+  animation: pulseGlowThieves 2s infinite;
+}
+
+.card[data-category="cornerstones"] {
+  animation: pulseGlowCornerstones 2s infinite;
+}
+
+.card[data-category="rangers"] {
+  animation: pulseGlowRangers 2s infinite;
+}
+
+.card[data-category="flamethrowers"] {
+  animation: pulseGlowFlamethrowers 2s infinite;
+}
+
+.card[data-category="backstops"] {
+  animation: pulseGlowBackstops 2s infinite;
 }
 
 /* ZOOMED CARD */
@@ -218,7 +321,7 @@ h2 {
 footer {
   background: black;
   color: white;
-  position: relative;
+  position: fixed;
   bottom: 0;
   width: 100%;
   padding: 5px 10px;
@@ -229,6 +332,8 @@ footer {
   border: 2px solid white;
   margin-top: 30px;
   font-family: "Knewave", cursive;
+  z-index: 9999;
+  pointer-events: none;
 }
 
 footer p {
