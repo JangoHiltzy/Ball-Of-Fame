@@ -52,6 +52,36 @@ h2 {
   margin-bottom: 15px;
 }
 
+/* MAIN TITLE FLICKER EFFECT */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  20% {
+    opacity: 0.4;
+    filter: brightness(1.8);
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.6;
+    filter: brightness(2);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+#main-title {
+  display: inline-block;
+  animation: flicker 0.6s ease-in-out infinite;
+}
+
 /* GALLERY CONTAINER */
 .gallery {
   display: flex;
@@ -364,6 +394,10 @@ footer p {
 .socials a {
   text-decoration: none;
   border: none;
+}
+
+.flicker-char {
+  animation: flicker 0.1s linear infinite;
 }
 
 /* RESPONSIVE DESIGN */
