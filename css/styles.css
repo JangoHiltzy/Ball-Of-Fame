@@ -162,12 +162,13 @@ h2 {
 }
 
 .card-front {
-  background-color: #c0c0c0;
+  background-color: #fff;
   z-index: 1;
 }
 
 .card-back {
-  background-color: #696969;
+  background-color: #000;
+  color: #fff;
   z-index: 0;
   visibility: hidden;
 }
