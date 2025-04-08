@@ -126,7 +126,6 @@ h2 {
 .card {
   width: 100%;
   aspect-ratio: 3 / 4;
-  background-color: #b7b7b7;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -137,6 +136,14 @@ h2 {
   overflow: hidden;
 }
 
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  background-color: transparent;
+  display: block;
+}
 .card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -162,7 +169,6 @@ h2 {
 }
 
 .card-front {
-  background-color: #fff;
   z-index: 1;
 }
 
@@ -171,6 +177,16 @@ h2 {
   color: #fff;
   z-index: 0;
   visibility: hidden;
+  font-family: "Knewave", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  transition: visibility 0s, opacity 0s;
+  line-height: 1.5;
 }
 
 /* CARDS GLOW EFFECT BY CATEGORY */
@@ -316,6 +332,10 @@ h2 {
 .zoomed-card.flipped .card-back {
   visibility: visible;
   z-index: 1;
+}
+
+.zoomed-card .card:hover {
+  transform: none;
 }
 
 @keyframes pulseGlow {
