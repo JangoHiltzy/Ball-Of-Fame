@@ -338,6 +338,24 @@ h2 {
   transform: none;
 }
 
+.flag-icon {
+  width: 160px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.player-name {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+.player-desc {
+  font-size: 1.5rem;
+  margin-top: 2px;
+  text-align: center;
+  padding: 0 10px;
+}
+
 @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 100px rgba(255, 255, 255, 0.3);
@@ -434,5 +452,21 @@ footer p {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     gap: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .flag-icon {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .player-name {
+    font-size: 1rem;
+  }
+
+  .player-desc {
+    font-size: 0.8rem;
   }
 }
