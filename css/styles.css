@@ -512,7 +512,6 @@ footer {
   margin-top: 30px;
   font-family: "Knewave", cursive;
   z-index: 9999;
-  pointer-events: none;
 }
 
 footer p {
@@ -543,10 +542,6 @@ footer p {
 .socials a {
   text-decoration: none;
   border: none;
-}
-
-.flicker-char {
-  animation: flicker 0.1s linear infinite;
 }
 
 /* RESPONSIVE DESIGN */
